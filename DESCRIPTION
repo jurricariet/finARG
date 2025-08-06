@@ -1,0 +1,25 @@
+Package: finARG
+Type: Package
+Title: Financial Data Utilities for Argentina
+Version: 0.1.0
+Authors@R: 
+    c(person(given = "Juan",
+             family = "Urricariet",
+             role = c("aut", "cre"),
+             email = "juanurricariet@gmail.com"),
+      person(given = "Gonzalo Luis",
+             family = "Fernández",
+             role = c("aut"),
+             email = ""))
+Description: Provides functions to easily access, filter and process financial
+    indicators and market data for Argentina, including financial entities balance sheet indicators and CNV reports.
+    Allows filtering by period and entity with flexible search parameters.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+LazyDataCompression: xz
+Depends: 
+    R (>= 3.5)
+Imports:
+    dplyr,
+RoxygenNote: 7.3.2
