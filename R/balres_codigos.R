@@ -7,7 +7,7 @@
 balres_codigos <- function() {
   data <- balres
 
-  balres_unicos <- dplyr::distinct(data, codigo_de_linea, descripcion_del_indicador)
+  balres_unicos <- dplyr::distinct(data, codigo_de_linea, denominacion_de_la_cuenta)
 
   return(balres_unicos)
 }
