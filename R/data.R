@@ -93,4 +93,4 @@
 #'   \item{plazo_ff_meses}{Plazo en meses}
 #' }
 #' @source CNV
-"on_cnv"
+"fideicomisos_financieros_cnv"
