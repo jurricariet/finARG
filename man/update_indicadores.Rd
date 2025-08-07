@@ -10,6 +10,6 @@ update_indicadores()
 Nada. Guarda el archivo actualizado en `data/` del paquete.
 }
 \description{
-Verifica que exista un archivo en la fecha siguiente a la última y lo agrega al
+Verifica que exista un archivo en la fecha siguiente a la ultima y lo agrega al
 objeto `indicadores_bancos.rda`.
 }

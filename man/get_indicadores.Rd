@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_indicadores.R
 \name{get_indicadores}
 \alias{get_indicadores}
-\title{Obtiene indicadores de entidades por período y entidad}
+\title{Obtiene indicadores de entidades por periodo y entidad}
 \usage{
 get_indicadores(
   periodos = NULL,
@@ -12,17 +12,17 @@ get_indicadores(
 )
 }
 \arguments{
-\item{periodos}{Vector de períodos en formato "YYYY-MM". Si se pasan dos valores, se interpreta como rango.}
+\item{periodos}{Vector de periodos en formato "YYYY-MM". Si se pasan dos valores, se interpreta como rango.}
 
 \item{entidad}{Nombre (o parte del nombre) de la entidad (ej: "Galicia"). Por defecto trae todas.}
 
-\item{codigo_entidad}{Código(s) exacto(s) de la entidad. Opcional.}
+\item{codigo_entidad}{Codigo(s) exacto(s) de la entidad. Opcional.}
 
-\item{codigo_indicador}{Código(s) exacto(s) del indicador. Opcional.}
+\item{codigo_indicador}{Codigo(s) exacto(s) del indicador. Opcional.}
 }
 \value{
 Un dataframe filtrado.
 }
 \description{
-Filtra el dataset de indicadores financieros del BCRA por períodos seleccionados, entidad (por nombre o código) e indicador (por código).
+Filtra el dataset de indicadores financieros del BCRA por periodos seleccionados, entidad (por nombre o codigo) e indicador (por codigo).
 }

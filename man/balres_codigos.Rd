@@ -10,5 +10,5 @@ balres_codigos()
 Un dataframe con columnas: codigo_de_linea, denominacion_de_la_cuenta
 }
 \description{
-Devuelve un dataframe con el código y nombre de las cuentas disponibles.
+Devuelve un dataframe con el codigo y nombre de las cuentas disponibles.
 }

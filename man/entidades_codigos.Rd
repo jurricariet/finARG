@@ -10,5 +10,5 @@ entidades_codigos()
 Un dataframe con columnas: codigo_entidad, nombre_de_entidad.
 }
 \description{
-Devuelve un dataframe con el código y nombre de las entidades disponibles.
+Devuelve un dataframe con el codigo y nombre de las entidades disponibles.
 }

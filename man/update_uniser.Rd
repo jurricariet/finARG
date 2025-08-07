@@ -11,5 +11,5 @@ Nada. Guarda el archivo actualizado en `data/` del paquete.
 }
 \description{
 Verifica que exista un cambio en el excel uniser y, de existir, guarda la nueva
-versión en el objeto `uniser.rda`.
+version en el objeto `uniser.rda`.
 }

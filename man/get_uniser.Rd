@@ -9,11 +9,11 @@ get_uniser(entidad = NULL, codigo_entidad = NULL)
 \arguments{
 \item{entidad}{Nombre (o parte del nombre) de la entidad (ej: "Galicia"). Por defecto trae todas.}
 
-\item{codigo_entidad}{Código(s) exacto(s) de la entidad. Opcional.}
+\item{codigo_entidad}{Codigo(s) exacto(s) de la entidad. Opcional.}
 }
 \value{
 Un dataframe filtrado.
 }
 \description{
-Permite filtrar por entidad para obtener sucursales, casas matrices y otros tipos de unidad por fecha de alta/baja y ubicación geográfica
+Permite filtrar por entidad para obtener sucursales, casas matrices y otros tipos de unidad por fecha de alta/baja y ubicacion geografica
 }

@@ -3,17 +3,17 @@
 \docType{data}
 \name{uniser}
 \alias{uniser}
-\title{Datos de unidades de servicio por entidad de acuerdo a fechas de alta/baja y ubicación geográfica}
+\title{Datos de unidades de servicio por entidad de acuerdo a fechas de alta/baja y ubicacion geografica}
 \format{
 Un dataframe con 13 columnas:
 \describe{
-  \item{codigo_entidad}{Código de la entidad}
-  \item{pais}{País de la unidad}
+  \item{codigo_entidad}{Codigo de la entidad}
+  \item{pais}{Pais de la unidad}
   \item{provincia}{Provincia de la unidad}
   \item{partido}{Partido o departamento de la unidad}
   \item{localidad}{Localidad de la unidad}
-  \item{direccion}{Dirección de la unidad}
-  \item{codigo_de_filial}{Código de filial}
+  \item{direccion}{Direccion de la unidad}
+  \item{codigo_de_filial}{Codigo de filial}
   \item{tipo_de_unidad}{Tipo de unidad}
   \item{fecha_de_alta}{Fecha de alta de la unidad}
   \item{fecha_de_baja}{Fecha de baja de la unidad}
@@ -29,6 +29,6 @@ BCRA
 uniser
 }
 \description{
-Datos de unidades de servicio por entidad de acuerdo a fechas de alta/baja y ubicación geográfica
+Datos de unidades de servicio por entidad de acuerdo a fechas de alta/baja y ubicacion geografica
 }
 \keyword{datasets}

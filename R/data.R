@@ -1,15 +1,15 @@
 #' Datos de indicadores de entidades financieras a partir del BCRA
 #'
-#' Incluye información desde enero 2011
+#' Incluye informacion desde enero 2011
 #' Nota: no se encontraron datos para 2011-2, 2011-6 y 2013-5
 #'
 #' @format Un dataframe con 6 columnas:
 #' \describe{
-#'   \item{codigo_de_entidad}{Código de la entidad}
+#'   \item{codigo_de_entidad}{Codigo de la entidad}
 #'   \item{nombre_de_entidad}{Nombre de la entidad}
 #'   \item{fecha}{Fecha}
-#'   \item{codigo_de_linea}{Código de línea}
-#'   \item{descripcion_del_indicador}{descripción del indicador}
+#'   \item{codigo_de_linea}{Codigo de linea}
+#'   \item{descripcion_del_indicador}{descripcion del indicador}
 #'   \item{valor}{Valor del indicador}
 #' }
 #' @source BCRA
@@ -17,15 +17,15 @@
 
 #' Datos del balance resumido de entidades financieras a partir del BCRA
 #'
-#' Incluye información desde enero 2011
+#' Incluye informacion desde enero 2011
 #' Nota: no se encontraron datos para 2011-2, 2011-6 y 2013-5
 #'
 #' @format Un dataframe con 6 columnas:
 #' \describe{
-#'   \item{codigo_de_entidad}{Código de la entidad}
+#'   \item{codigo_de_entidad}{Codigo de la entidad}
 #'   \item{nombre_de_entidad}{Nombre de la entidad}
 #'   \item{fecha}{Fecha}
-#'   \item{codigo_de_linea}{Código de línea}
+#'   \item{codigo_de_linea}{Codigo de linea}
 #'   \item{denominacion_de_la_cuenta}{Nombre de la cuenta}
 #'   \item{valor}{Valor de la cuenta}
 #' }
@@ -33,17 +33,17 @@
 "balres"
 
 
-#' Datos de unidades de servicio por entidad de acuerdo a fechas de alta/baja y ubicación geográfica
+#' Datos de unidades de servicio por entidad de acuerdo a fechas de alta/baja y ubicacion geografica
 #'
 #' @format Un dataframe con 13 columnas:
 #' \describe{
-#'   \item{codigo_entidad}{Código de la entidad}
-#'   \item{pais}{País de la unidad}
+#'   \item{codigo_entidad}{Codigo de la entidad}
+#'   \item{pais}{Pais de la unidad}
 #'   \item{provincia}{Provincia de la unidad}
 #'   \item{partido}{Partido o departamento de la unidad}
 #'   \item{localidad}{Localidad de la unidad}
-#'   \item{direccion}{Dirección de la unidad}
-#'   \item{codigo_de_filial}{Código de filial}
+#'   \item{direccion}{Direccion de la unidad}
+#'   \item{codigo_de_filial}{Codigo de filial}
 #'   \item{tipo_de_unidad}{Tipo de unidad}
 #'   \item{fecha_de_alta}{Fecha de alta de la unidad}
 #'   \item{fecha_de_baja}{Fecha de baja de la unidad}
@@ -58,13 +58,13 @@
 #'
 #' @format Un dataframe con 12 columnas:
 #' \describe{
-#'   \item{fecha_colocacion}{Fecha de colocación de la ON}
-#'   \item{fecha_de_emision_y_liquidacion}{Fecha de liquidación de la ON}
+#'   \item{fecha_colocacion}{Fecha de colocacion de la ON}
+#'   \item{fecha_de_emision_y_liquidacion}{Fecha de liquidacion de la ON}
 #'   \item{sociedad}{Nombre de la sociedad emisora}
 #'   \item{serie_clase}{Serie/clase de la ON}
 #'   \item{moneda}{Moneda}
-#'   \item{monto_nominal_moneda_emision}{Monto nominal de la emisión}
-#'   \item{regimen_de_emision}{Régimen de la emisión}
+#'   \item{monto_nominal_moneda_emision}{Monto nominal de la emision}
+#'   \item{regimen_de_emision}{Regimen de la emision}
 #'   \item{tipo_de_tasa}{Tipo de tasa}
 #'   \item{precio_de_corte}{Precio de corte}
 #'   \item{tna_inicial}{TNA inicial}
@@ -74,18 +74,18 @@
 #' @source CNV
 "on_cnv"
 
-#' Datos de constitución de fideicomisos financieros desde 2015 publicado por CNV.
+#' Datos de constitucion de fideicomisos financieros desde 2015 publicado por CNV.
 #'
 #' @format Un dataframe con 13 columnas:
 #' \describe{
-#'   \item{fecha_colocacion}{Fecha de colocación}
-#'   \item{fecha_de_liquidacion_y_emision}{Fecha de emisión y liquidación del fideicomiso}
+#'   \item{fecha_colocacion}{Fecha de colocacion}
+#'   \item{fecha_de_liquidacion_y_emision}{Fecha de emision y liquidacion del fideicomiso}
 #'   \item{fiduciario}{Nombre del fiduciario}
 #'   \item{fiduciante}{Nombre del fiduciante}
-#'   \item{denominacion_f_f}{Denominación del fideicomiso financiero}
+#'   \item{denominacion_f_f}{Denominacion del fideicomiso financiero}
 #'   \item{moneda}{Moneda}
-#'   \item{monto_nominal_ff_moneda_emision}{Monto nominal de la emisión}
-#'   \item{categoria}{Categoría}
+#'   \item{monto_nominal_ff_moneda_emision}{Monto nominal de la emision}
+#'   \item{categoria}{Categoria}
 #'   \item{precio_de_corte_vrd_senior}{Precio de corte}
 #'   \item{tipo_de_tasa}{Tipo de tasa}
 #'   \item{tna_inicial_vrd_senior}{TNA inicial VRD senior}

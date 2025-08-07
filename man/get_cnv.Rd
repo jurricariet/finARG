@@ -2,18 +2,18 @@
 % Please edit documentation in R/get_cnv.R
 \name{get_cnv}
 \alias{get_cnv}
-\title{Obtiene series estadísticas de la CNV}
+\title{Obtiene series estadisticas de la CNV}
 \usage{
 get_cnv(serie = c("ON", "fideicomisos"), periodo = NULL)
 }
 \arguments{
 \item{serie}{Tipo de instrumento: "ON" (obligaciones negociables) o "fideicomisos".}
 
-\item{periodo}{Vector de fechas en formato "YYYY-MM". Puede ser un solo valor, un rango (dos valores) o múltiples fechas.}
+\item{periodo}{Vector de fechas en formato "YYYY-MM". Puede ser un solo valor, un rango (dos valores) o multiples fechas.}
 }
 \value{
 Un dataframe filtrado.
 }
 \description{
-En base a la elección de la serie (ON, fideicomisos financieros), se filtra el período de emisiones para obtener la serie.
+En base a la eleccion de la serie (ON, fideicomisos financieros), se filtra el periodo de emisiones para obtener la serie.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/update_data.R
 \name{update_data}
 \alias{update_data}
-\title{Ejecuta todas las funciones de actualización de datos del paquete}
+\title{Ejecuta todas las funciones de actualizacion de datos del paquete}
 \usage{
 update_data()
 }

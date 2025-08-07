@@ -1,6 +1,6 @@
 #' Lista de cuentas del balance resumido disponible en el txt Entfin/Tec_Cont/balres
 #'
-#' Devuelve un dataframe con el código y nombre de las cuentas disponibles.
+#' Devuelve un dataframe con el codigo y nombre de las cuentas disponibles.
 #'
 #' @return Un dataframe con columnas: codigo_de_linea, denominacion_de_la_cuenta
 #' @export

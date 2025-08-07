@@ -1,6 +1,6 @@
 #' Lista de indicadores financieros disponibles en el txt Entfin/Tec_Cont/indicad
 #'
-#' Devuelve un dataframe con el código y nombre de los indicadores disponibles.
+#' Devuelve un dataframe con el codigo y nombre de los indicadores disponibles.
 #'
 #' @return Un dataframe con columnas: codigo_indicador, nombre_indicador.
 #' @export

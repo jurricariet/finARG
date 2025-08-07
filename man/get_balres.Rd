@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_balres.R
 \name{get_balres}
 \alias{get_balres}
-\title{Obtiene el balance resumido de entidades por período y entidad}
+\title{Obtiene el balance resumido de entidades por periodo y entidad}
 \usage{
 get_balres(
   periodos = NULL,
@@ -12,17 +12,17 @@ get_balres(
 )
 }
 \arguments{
-\item{periodos}{Vector de períodos en formato "YYYY-MM". Si se pasan dos valores, se interpreta como rango.}
+\item{periodos}{Vector de periodos en formato "YYYY-MM". Si se pasan dos valores, se interpreta como rango.}
 
 \item{entidad}{Nombre (o parte del nombre) de la entidad (ej: "Galicia"). Por defecto trae todas.}
 
-\item{codigo_entidad}{Código(s) exacto(s) de la entidad. Opcional.}
+\item{codigo_entidad}{Codigo(s) exacto(s) de la entidad. Opcional.}
 
-\item{codigo_cuenta}{Código(s) exacto(s) de la cuenta Opcional.}
+\item{codigo_cuenta}{Codigo(s) exacto(s) de la cuenta Opcional.}
 }
 \value{
 Un dataframe filtrado.
 }
 \description{
-Filtra el dataset de balance resumido del BCRA por períodos seleccionados, entidad (por nombre o código) e indicador (por código).
+Filtra el dataset de balance resumido del BCRA por periodos seleccionados, entidad (por nombre o codigo) e indicador (por codigo).
 }

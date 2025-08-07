@@ -7,11 +7,11 @@
 \format{
 Un dataframe con 6 columnas:
 \describe{
-  \item{codigo_de_entidad}{Código de la entidad}
+  \item{codigo_de_entidad}{Codigo de la entidad}
   \item{nombre_de_entidad}{Nombre de la entidad}
   \item{fecha}{Fecha}
-  \item{codigo_de_linea}{Código de línea}
-  \item{descripcion_del_indicador}{descripción del indicador}
+  \item{codigo_de_linea}{Codigo de linea}
+  \item{descripcion_del_indicador}{descripcion del indicador}
   \item{valor}{Valor del indicador}
 }
 }
@@ -22,7 +22,7 @@ BCRA
 indicadores_bancos
 }
 \description{
-Incluye información desde enero 2011
+Incluye informacion desde enero 2011
 Nota: no se encontraron datos para 2011-2, 2011-6 y 2013-5
 }
 \keyword{datasets}

@@ -10,5 +10,5 @@ indicadores_codigos()
 Un dataframe con columnas: codigo_indicador, nombre_indicador.
 }
 \description{
-Devuelve un dataframe con el código y nombre de los indicadores disponibles.
+Devuelve un dataframe con el codigo y nombre de los indicadores disponibles.
 }
