@@ -1,0 +1,140 @@
+---
+output: github_document
+---
+
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+
+
+# Datos del Banco Central de la República Argentina (BCRA) y la Comisión Nacional de Valores (CNV)
+
+<br>
+
+**NO OFICIAL: el paquete no es un producto oficial**
+
+## Descripción
+
+Este paquete permite acceder a algunos de los datos publicados por el Banco Central de la República Argentina (BCRA) y Comisión Nacional de Valores (CNV) y trabajar con ellos en el entorno de R. 
+
+Al momento se pueden consultar los siguientes datos:
+
+- Indicadores de entidades financieras desde enero 2011 a abril 2025 (BCRA).
+- Balance resumido de entidades financieras desde enero 2011 a abril 2025 (BCRA).
+- Balance detallado de entidades financieras desde enero 2011 a abril 2025 (BCRA).
+- Unidades de servicio de entidades financieras históricas (BCRA).
+- Emisión de Obligaciones Negociables desde 2015 (CNV).
+- Emisión de fideicomisos financieros desde 2015 (CNV).
+
+El paquete incluye estos datos como dataframes a los cuales se puede acceder directamente al cargar el paquete (_excepto balance detallado, que por su tamaño se descarga en el momento_). Además, se incluye un conjunto de funciones para acceder a los datos de manera personalizada.
+
+## Instalación
+
+Para instalar el paquete, correr el siguiente código
+```{r, eval = FALSE}
+# install.packages('devtools')
+# si no tiene instalado devtools
+
+devtools::install_github("jurricariet/finARG")
+```
+
+## Modo de uso
+
+
+Se puede acceder a los datos a partir de las funciones `get_...()`
+
+- `get_uniser()`: Permite filtrar por entidad para obtener sucursales, casas matrices y otros tipos de unidad por fecha de alta/baja y ubicacion geografica.
+
+- `get_indicadores()`: Filtra el dataset de indicadores financieros publicado por el BCRA por periodos seleccionados, entidad (por nombre o codigo) e indicador (por codigo).
+
+- `get_balres()`: Filtra el dataset de balance resumido publicado por el BCRA por periodos seleccionados, entidad (por nombre o codigo) e indicador (por codigo).
+
+- `get_baldet()`: Descarga el balance detallado de entidades de acuerdo a los períodos especificados (demora para períodos extensos).
+
+- `get_cnv()`: Series estadísticas de emisiones de Obligaciones Negociables o Fideicomisos financieros de la CNV.
+
+
+Se pueden cargar los distintos dataframes completos directamente
+
+- Unidades de servicio: `uniser`
+- Indicadores financieros: `indicadores_bancos`
+- Balance resumido: `balres`
+- Emisión de Obligaciones Negociables (ONs): `on_cnv`
+- Emisión de fideicomisos financieros: `fideicomisos_financieros_cnv`
+- Balance detallado: `get_baldet()` _En este caso, realiza la descarga en el momento_
+
+```{r}
+# Cargo la libreria
+library(finARG)
+
+head(balres)
+```
+
+
+Para tener un listado de códigos de las entidades del BCRA puede usarse la función `entidades_codigos()`
+
+```{r}
+head(entidades_codigos())
+```
+
+Para un listado de códigos de indicadores financieros usar `indicadores_codigos()`
+
+```{r}
+head(indicadores_codigos())
+```
+
+Para un listado de códigos de cuentas del balance resumido: `balres_codigos()`
+
+```{r}
+head(balres_codigos())
+```
+
+
+## Actualización de los datos
+
+Para chequear actualizaciones de los respectivos archivos y descargarlas, se pueden correr
+funciones individuales para cada fuente o correr `update_data()` para correrlas todas juntas.
+Según el caso, chequea si hay nuevos datos y los agrega a los archivos respectivos alojados en el paquete.
+
+Las funciones son:
+
+- `update_uniser()`: Descarga el excel de unidades de servico del BCRA y, si tiene cambios respecto al del paquete, lo reemplaza.
+- `update_balres()`: Verifica si hay archivo del BCRA correspondiente a un mes posterior al último y lo agrega en caso afirmativo.
+- `update_indicadores()`: Verifica si hay archivo del BCRA correspondiente a un mes posterior al último y lo agrega en caso afirmativo.
+- `update_cnv()`: Descarga los excels de la página de CNV y, si tiene cambios respecto al del paquete, los reemplaza.
+- `update_data()`: Corre todas las funciones anteriores para actualizar todas las fuentes.
+
+
+## Ejemplo de uso:
+
+
+```{r}
+prestamos_provincia <- get_balres(periodos = c('2011-01','2025-04'),
+                                  codigo_entidad = '00014',
+                                  codigo_cuenta = c('100010303001','100010303005','100010303010','100010303015','100010303020','100010303030')) 
+```
+
+
+Puede verse en este gráfico la participación de cada tipo de préstamo en el activo del Banco Provincia.
+
+```{r}
+library(tidyverse)
+prestamos_provincia %>% 
+ mutate(fecha = ym(fecha)) %>% 
+  ggplot(aes(x=fecha,y=valor,group=denominacion_de_la_cuenta,fill=denominacion_de_la_cuenta))+
+  geom_area(position =  position_fill())+
+  theme_minimal()+
+  theme(legend.position = 'bottom')+
+  ggthemes::scale_fill_tableau(name='')+
+  labs(x='',y='',title='Banco Provincia: participacíon de los préstamos por tipo')
+```
+
