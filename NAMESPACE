@@ -2,6 +2,7 @@
 
 export(balres_codigos)
 export(entidades_codigos)
+export(get_baldet)
 export(get_balres)
 export(get_cnv)
 export(get_indicadores)
