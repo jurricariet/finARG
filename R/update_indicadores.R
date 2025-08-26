@@ -43,7 +43,7 @@ update_indicadores <- function() {
   }
 
   primeras_lineas <- readLines(temp_file, warn = FALSE, n = 10)
-  if (any(grepl("<html", tolower(primeras_lineas)))) {
+  if (any(grepl("<html", stringr::str_to_lower(primeras_lineas)))) {
     message("No hay actualizacion disponible para indicadores_bancos.")
     return(invisible(NULL))
   }
