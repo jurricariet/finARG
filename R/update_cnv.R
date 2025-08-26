@@ -45,11 +45,11 @@ update_cnv <- function() {
   }
 
   # Procesar ON
-  if (!"emision_de_obligaciones_negociables" %in% names(lista_dataframes)) {
+  if (!"emisión_de_obligaciones_negociables" %in% names(lista_dataframes)) {
     stop("No se encontro el archivo de Obligaciones Negociables en la descarga.")
   }
 
-  df_ON <- lista_dataframes$emision_de_obligaciones_negociables
+  df_ON <- lista_dataframes$emisión_de_obligaciones_negociables
   colnames(df_ON) <- df_ON[5,]
 
   on_cnv <- df_ON %>%
@@ -66,11 +66,11 @@ update_cnv <- function() {
     dplyr::select(-na)
 
   # Procesar Fideicomisos
-  if (!"emision_de_fideicomisos_financieros" %in% names(lista_dataframes)) {
+  if (!"emisión_de_fideicomisos_financieros" %in% names(lista_dataframes)) {
     stop("No se encontro el archivo de Fideicomisos Financieros en la descarga.")
   }
 
-  df_fideico <- lista_dataframes$emision_de_fideicomisos_financieros
+  df_fideico <- lista_dataframes$emisión_de_fideicomisos_financieros
   colnames(df_fideico) <- df_fideico[5,]
 
   fideicomisos_financieros_cnv <- df_fideico %>%
