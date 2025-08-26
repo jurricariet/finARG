@@ -42,21 +42,21 @@ update_balres <- function() {
   }
 
   primeras_lineas <- readLines(temp_file, warn = FALSE, n = 10)
-  if (any(grepl("<html", tolower(primeras_lineas)))) {
+  if (any(grepl("<html", stringr::str_to_lower(primeras_lineas)))) {
     message("No hay actualizacion disponible para balres.")
     return(invisible(NULL))
   }
 
   cat("Archivo descargado. Leyendo contenido...\n")
 
-  ruta_objetivo <- "Entfin/Tec_Cont/balres/COMPLETO.txt"
+  ruta_objetivo <- "Entfin/Tec_Cont/balres/COMPLETO.TXT"
   archivos <- tryCatch(archive::archive(temp_file), error = function(e) {
     message("No se pudo leer el archivo como .7z. Puede estar corrupto.")
     return(NULL)
   })
 
   if (is.null(archivos) || !ruta_objetivo %in% archivos$path) {
-    message("No se encontro el archivo COMPLETO.txt en el .7z")
+    message("No se encontro el archivo COMPLETO.TXT en el .7z")
     return(invisible(NULL))
   }
 
