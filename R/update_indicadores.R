@@ -76,8 +76,8 @@ update_indicadores <- function() {
   colnames(nuevo_df) <- colnames(indicadores_bancos)
 
   if (!any(indicadores_bancos$fecha == fecha_siguiente)) {
-    indicadores_bancos_actualizado <- dplyr::bind_rows(indicadores_bancos, nuevo_df)
-    save(indicadores_bancos_actualizado, file = "data/indicadores_bancos.rda", compress = "xz")
+    indicadores_bancos <- dplyr::bind_rows(indicadores_bancos, nuevo_df)
+    save(indicadores_bancos, file = "data/indicadores_bancos.rda", compress = "xz")
     cat("Datos de ", fecha_siguiente, " agregados exitosamente.\n")
   } else {
     cat("Ya existen datos para ", fecha_siguiente, ". No se agregaron duplicados.\n")
